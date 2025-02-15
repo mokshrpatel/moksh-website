@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My career website</title>
+    <title>moksh database website</title>
 </head>
 <body>
     <p>My name is {{name}}</p>
@@ -14,14 +14,23 @@
             {{company}}
         {%endfor%}
     </div>
+    <br>
     <div>
         jobs opening:
         {% for job in jobs %}
-            {% if job['salary'] > 13000 %}
+            <!-- {% if job['salary'] > 13000 %}
                 {% include 'include.html' %}
-            {% endif %}
-            
+            {% endif %} -->
+            {{job}}
+            <br>
+            <a href="mailto:mokshrpatel2005@gmail.com?subject=To apply in {{job['company']}}" type="button">Apply</a>  
+
+            <hr>    
         {% endfor %}
     </div>
 </body>
 </html>
+
+
+<!-- mail to link generator link: https://mailtolink.me/
+write whatever you want to add in email and add the given below generated code into href attribute -->
