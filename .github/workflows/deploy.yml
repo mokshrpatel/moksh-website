@@ -1,0 +1,30 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create environment file
+        run: echo "DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }}" > .env
+
+      - name: Deploy application
+        run: |
+          echo "Deploying application..."
+          python app.py  # Replace with your actual deployment command
