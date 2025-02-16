@@ -7,22 +7,6 @@ from database import load_jobs_from_db  #if we importing something form the anto
 
 app = Flask(__name__)
 
-companies = ['Microsoft', 'Google', 'Paypal', 'Meta']
-jobs = [
-    {
-        'id' : 1, 'company': 'Microsoft', 'salary': 12000
-    },
-    {
-        'id' : 2, 'company': 'Google', 'salary': 13000
-    },
-        {
-        'id' : 3, 'company': 'Meta', 'salary': 14000
-    },
-    {
-        'id' : 4, 'company': 'Paypal', 'salary': 15000
-    },
-]        
-
 
 @app.route("/")
 def hello():
