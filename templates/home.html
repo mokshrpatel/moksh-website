@@ -17,11 +17,16 @@
     <br>
     <div>
         jobs opening:
+        <br>
         {% for job in jobs %}
             <!-- {% if job['salary'] > 13000 %}
                 {% include 'include.html' %}
             {% endif %} -->
-            {{job}}
+            <b>Role: </b> {{job['title']}}
+            <br>
+            <b>location: </b> {{job['location']}}
+            <br>
+            <b>salary: </b> {{job['salary']}}
             <br>
             <a href="mailto:mokshrpatel2005@gmail.com?subject=To apply in {{job['company']}}" type="button">Apply</a>  
 
