@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 import os
 # syntax for connecting sqlalchemy to mysql
 # engine = create_engine( "mysql+pymysql://user:pass@host/dbname?charset=utf8mb4")
-db_connection_string = os.getenv["DB_CONNECTION_STRING"]
+db_connection_string = os.environ["DB_CONNECTION_STRING"]
 engine = create_engine(db_connection_string)
 
 # more secure way to connect with SSL
