@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     jobs = load_jobs_from_db()
-    return render_template("home.html", name = "Moksh R. Patel", companies = companies, jobs=jobs )
+    return render_template("home.html", name = "Moksh R. Patel", jobs=jobs )
 
 
 if __name__ == '__main__':
